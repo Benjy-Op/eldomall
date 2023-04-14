@@ -44,13 +44,8 @@ form input {
     margin: 9px;
     font-size: 16px;
 }
-.signbtn {
-    padding: 5px 10px;
-    background-color: #b7baaf;
-    color: #343232;
-    
 
-}
+
 /*sign up form*/
 .signfomu{
     align-items: flex-start;
