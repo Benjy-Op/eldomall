@@ -29,6 +29,11 @@
         <label for="password">Password</label>
             <input type="password" id="password" name="password">
 
+            <%if(locals.errorMessage){%>
+
+                <p style="color:orangered"> <%= errorMessage %> </p>
+        
+                <%}%>
         <button class="signBtn">Sign up</button>
     </form>
 

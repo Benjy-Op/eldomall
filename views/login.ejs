@@ -22,7 +22,15 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password">
 
-        <button class="signBtn">Sign up</button>
+        <!-- falsy and truthy values in js, template literals -->
+
+        <%if(locals.errorMessage){%>
+
+        <p style="color:orangered"> <%= errorMessage %> </p>
+
+        <%}%>
+
+        <button class="signBtn">Sign in</button>
     </form>
 </body>
 </html>
