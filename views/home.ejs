@@ -10,11 +10,42 @@
 <body>
     <nav class="navs">
         <a href="/"> Home</a>
-        <a href="/login">Login</a>
-        <a href="/signup">SignUp</a>
+
+        <%if(locals.isLoggedIn){%>
+            <a href="/logout">Logout</a>
+            <a href="/account">
+                <%=locals.user.fullname%>
+            </a>
+            <%}else{%>
+                <a href="/login">Login</a>
+                <a href="/signup">Sign up</a>
+                <%}%>
+                
     </nav>
     <h1>Home</h1>
+    <main>
+        <section class="products">
+            <% if(locals.message){%>
+                <h2><%= locals.message %></h2>
+            <% }else{ %> 
 
+                <% products.forEach (product => { %>
+                    <div class="product">
+                   
+                    <img src="katulu.jpg" alt="ner ner">
+                    <h3><%= product.name %></h3>
+                    <p>KSH. <%= product.price %></p>
+                    <button>add to cart</button>
+                    </div>
+            
+                <% }) %>
+            <% } %>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 
     
 </body>
